@@ -1,0 +1,44 @@
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+  color: #ccc;
+}
+
+.social-icons {
+  margin-bottom: 20px;
+}
+
+.social-icons svg {
+  font-size: 20px;
+  margin: 0 15px;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.social-icons svg:hover {
+  color: black;
+}
+
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: rgb(62, 59, 59);
+}
+
+.footer .copyright {
+  font-size: 14px;
+  color: ##6B7280;
+}

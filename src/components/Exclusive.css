@@ -1,0 +1,26 @@
+.exl_headers {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px ;
+  margin-left: 35px;
+  margin-bottom: 30px;
+}
+
+.exl_box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.exl_i img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.exl_headers a{
+  text-decoration: none;
+}
+
+.exl_headers h1{
+padding-left: 55px;
+}
