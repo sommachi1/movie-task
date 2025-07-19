@@ -1,61 +1,121 @@
-import "./Casts.css";
-import { IoIosArrowForward } from "react-icons/io";
+import "./arrival.css";
+import { useState } from "react";
+import { MdOutlineArrowBackIosNew } from "react-icons/md";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
+import cast1 from '../../public/images/cast1.png'
+import cast2 from "../../public/images/cast2.png";
+import cast3 from "../../public/images/cast3.png";
+import cast4 from "../../public/images/cast4.png";
+
+type Movie = {
+  id: number;
+  img: string;
+  title: string;
+};
 
 const Casts = () => {
+  //   const [selected, setSelected] = useState(null);
+  const [position, setPosition] = useState(0);
+  const visibleSlides = 5;
+  const slideWidth = 390; // px
+
+  const movies: Movie[] = [
+    {
+      id: 1,
+      img: cast1,
+      title: "Dune",
+    },
+    {
+      id: 2,
+      img: cast2,
+      title: "No Time To Die",
+    },
+    {
+      id: 3,
+      img: cast3,
+      
+      title: "Shang-Chi and the Legend ",
+      
+    },
+    {
+      id: 4,
+      img: cast4,
+      
+      title: "Don't Breathe 2",
+     
+    },
+    {
+      id: 1,
+      img: cast1,
+      
+      title: "Dune",
+      
+    },
+    {
+      id: 2,
+      img: cast2,
+      
+      title: "No Time To Die",
+      
+    },
+    {
+      id: 3,
+      img: cast3,
+      
+      title: "Shang-Chi and the Legend ",
+     
+    },
+    {
+      id: 4,
+      img: cast4,
+      
+      title: "Don't Breathe 2",
+    },
+  ];
+  const maxPosition = movies.length - visibleSlides;
+  const moveSlide = (direction: number) => {
+    let newPosition = position + direction;
+    if (newPosition < 0) newPosition = 0;
+    if (newPosition > maxPosition) newPosition = maxPosition;
+    setPosition(newPosition);
+  };
+
   return (
-<section>
-      <div className="exl_headers">
-        <h1>Exclusive Videoes</h1>
-        <div className="spanie_link">
-          <a href="#">
-            <span className="see"> See More</span>
-            <span className="spanie">
-              <IoIosArrowForward />
-            </span>
-          </a>
+    <section>
+      <div className="headings">
+        <h1>Featured Casts</h1>
+        <div className="the_links">
+          <a href="#">See More </a>
         </div>
       </div>
+      <div className="Moviess_box">
+        <button onClick={() => moveSlide(-2)} className="My_button"><MdOutlineArrowBackIosNew size={30}/></button>
 
-      <div className="exl_box">
-        <div>
-          {/* <button>Left</button> */}
-        </div>
-        <div className="exl-i">
-          <img src="../../public/images/cast1.png" alt="Stranger Things" />
-          <div className="movie-info">
-            <h3>Keanu Reeves</h3>
+        <div className="moviess-list-wrapper">
+          <div
+            className="moviess-list"
+            style={{ transform: `translateX(-${position * slideWidth}px)` }}
+
+          >
+            {movies.map((movie) => (
+              <div key={movie.id} className="Moviess-card">
+                <img src={movie.img} alt={movie.title} className="movie-image1" />
+          
+                <div className="mymoviess-info">
+                 
+                  <h3 className="my_titlehead">{movie.title}</h3>
+                  
+                  
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        <div>
-          <img src="../../public/images/cast2.png" alt="Stranger Things" />
-          <div className="movie-info">
-            <h3>Ryan Reynolds</h3>
-          </div>
-        </div>
-
-         <div>
-          <img src="../../public/images/cast2.png" alt="Stranger Things" />
-          <div className="movie-info">
-            <h3>Ryan Reynolds</h3>  
-          </div>
-        </div>
-
-        
-
-        <div>
-          <img src="../../public/images/cast3.png" alt="Stranger Things" />
-          <div className="movie-info">
-            <h3>Timothée Chalamet</h3>
-           </div>
-        </div>
-      </div>
-      <div>
-        <button>Right</button>
+        <button onClick={() => moveSlide(2)} className="My_button"><MdOutlineArrowForwardIos size={30}/></button>
       </div>
     </section>
-
-    
   );
 };
+
 export default Casts;

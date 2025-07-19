@@ -1,7 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../public/images/vector2.png";
 
 export default function Login() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Here you would typically handle registration logic
+    navigate("/dashboard"); // Redirect to home after registration
+  };
   return (
     <div className="auth-container">
       <div className="auth-card">
@@ -9,7 +16,7 @@ export default function Login() {
         <h2>Welcome Back</h2>
         <p className="auth-subtext">Login to continue your journey</p>
 
-        <form className="auth-form">
+        <form onSubmit={handleSubmit} className="auth-form">
           <input
             type="email"
             placeholder="Email"
@@ -30,7 +37,7 @@ export default function Login() {
 
         <p className="auth-switch">
           Don't have an account?{" "}
-          <Link to="/" className="auth-link">
+          <Link to="/register " className="auth-link">
             Register
           </Link>
         </p>

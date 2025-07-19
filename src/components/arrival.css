@@ -1,104 +1,194 @@
-.movie-card {
-  border-radius: 10px;
-  width: 220px;
-  flex: 0 0 auto;
-  margin: 15px;
-  /* transition: transform 0.3s; */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* .movie-card:hover {
-  transform: scale(1.05);
-} */
+.headings{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px;
+  
+}
 
-.movie-card img {
+.headings h1 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 10rem;
+}
+
+.the_links a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.Moviess_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  gap: 1rem;
+  position: relative;
   width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
-.movie-info {
-  padding: 10px 0;
+.moviess-list-wrapper {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
 }
 
-.movie-info .year {
-  font-size: 12px;
-  color: #aaa;
+/* Scrollable movie list */
+.moviess-list {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.4s ease-in-out;
+  width: 100vw; /* Adjust this width as needed */
+  max-width: 1000px;
+  /* height: 100; */
+ overflow: visible;
 }
 
-.movie-info h3 {
-  margin: 5px 0;
-  font-size: 16px;
+/* Each movie card */
+.Moviess-card {
+  position: relative;
+  min-width: 150px;
+  max-width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  color: black;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.Moviess-card:hover {
+  transform: scale(1.03);
+  z-index: 1; /* lift it above neighbors slightly */
+}
+
+.like {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.moviess-image1 {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+.mymoviess-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 10px;
+}
+
+.my_year {
+  font-size: 10px;
+  color: #bbb;
+  font-weight: bold;
+}
+
+.my_titlehead {
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .ratings {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  margin: 5px 0;
-  font-size: 12px;
 }
 
 .imdb {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+}
+
+.my_tomato {
+  align-items: center;
+  padding-left: 90px;
+  gap: 20px;
+}
+
+.imdb img {
+  width: 25px;
+  height: auto;
 }
 
 .tomato {
-  color: #fa320a;
-  font-size: 12px;
+  font-size: 0.75rem;
+  color: #ff6347;
 }
 
-.genres {
-  font-size: 12px;
+.moviese_genres {
+  font-size: 0.75rem;
   color: #bbb;
 }
 
-.movie_headings {
-  display: flex;
-  justify-content: space-between;
+/* Buttons */
+.My_button {
+  background-color: transparent;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-.moviecard_headers {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 25px ;
-  margin-left: 35px;
-  margin-bottom: 30px;
+.My_button:hover {
+  background-color: #adadad22;
 }
 
-.Movie_box {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  /* gap: 20; */
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .Movie-card {
+    min-width: 140px;
+  }
+
+  .movie-info {
+    padding: 0.6rem;
+  }
+
+  .Movie_box > div > button {
+    padding: 0.4rem 0.6rem;
+  }
 }
 
-.see{
-  color: red;
+@media (max-width: 480px) {
+  .Movie-card {
+    min-width: 120px;
+  }
 
-}
-.spanie_link {
-  align-items: center;
-  justify-content: center;
-  vertical-align: center;
-}
+  .movie-info {
+    padding: 0.4rem;
+  }
 
-/* 
-.movie-container {
-}
+  .imdb img {
+    width: 20px;
+  }
 
-.title-container {
+  .Movie_box {
+    padding: 1rem 0.5rem;
+    gap: 0.5rem;
+  }
 
-} */
-
-.title-container a {
-  color: lightcoral;
-  font: 1.3rem;
-}
-
-.spanie {
-  align-items: center;
-  justify-content: center;
-  vertical-align: center;
+  .Movie_box > div > button {
+    font-size: 0.8rem;
+  }
 }
