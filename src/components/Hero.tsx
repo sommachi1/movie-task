@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 // import { GiHamburgerMenu } from "react-icons/gi";
-import Menu from "../../public/images/Menu.png";
+import Menu from "../images/Menu.png";
 import { CiSearch } from "react-icons/ci";
 import { FaRegPlayCircle } from "react-icons/fa";
-import logo from "../../public/images/movixlogo.png"; // Make sure to add your logo image
-import tomamto from "../../public/images/tomato.png";
-import imdp from "../../public/images/imdb.png";
+import logo from "../images/movixlogo.png"; // Make sure to add your logo image
+import tomamto from "../images/tomato.png";
+import imdp from '../images/imdb.png';
 
 export default function HeroWithNav() {
   const navigate = useNavigate();
@@ -64,7 +64,7 @@ export default function HeroWithNav() {
 
           <button
             className="trailer-button"
-            onClick={() => navigate("/register")}
+            onClick={() => navigate("/")}
           >
             <FaRegPlayCircle />
             <span>WATCH TRAILER</span>

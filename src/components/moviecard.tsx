@@ -2,12 +2,12 @@ import "./moviecard.css";
 import { useState } from "react";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
-import herocard1 from '../../public/images/herocard1.png'
-import herocard2 from "../../public/images/herocard2.png";
-import herocard3 from "../../public/images/herocard3.png";
-import herocard4 from "../../public/images/herocard4.png";
-import imdb from "../../public/images/imdb.png";
-import Favorite from '../../public/images/Favorite.png'
+import herocard1 from '../images/herocard1.png'
+import herocard2 from "../images/herocard2.png";
+import herocard3 from "../images/herocard3.png";
+import herocard4 from "../images/herocard4.png";
+import imdb from "../images/imdb.png";
+import Favorite from '../images/Favorite.png'
 type Movie = {
   id: number;
   img: string;

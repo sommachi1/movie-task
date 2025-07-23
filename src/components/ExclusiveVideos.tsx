@@ -2,9 +2,9 @@ import "./moviecard.css";
 import { useState } from "react";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
-import herocard1 from '../../public/images/Video1.png'
-import herocard2 from "../../public/images/Video2.png";
-import herocard3 from "../../public/images/Video3.png";
+import herocard1 from '../images/Video1.png'
+import herocard2 from "../images/Video2.png";
+import herocard3 from "../images/Video3.png";
 type Movie = {
   id:number;
   img: string;

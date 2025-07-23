@@ -2,10 +2,10 @@ import "./arrival.css";
 import { useState } from "react";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
-import cast1 from '../../public/images/cast1.png'
-import cast2 from "../../public/images/cast2.png";
-import cast3 from "../../public/images/cast3.png";
-import cast4 from "../../public/images/cast4.png";
+import cast1 from '../images/cast1.png'
+import cast2 from "../images/cast2.png";
+import cast3 from "../images/cast3.png";
+import cast4 from "../images/cast4.png";
 
 type Movie = {
   id: number;

@@ -1,5 +1,5 @@
 import { useNavigate, Link } from "react-router-dom";
-import logo from "../../public/images/vector2.png"; // Add your logo image to assets folder
+import logo from "../images/vector2.png"; // Add your logo image to assets folder
 
 export default function Register() {
   const navigate = useNavigate();
